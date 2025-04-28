@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cureplus - Healing Beyond Expectations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Nunito', sans-serif;
+    }
+    body {
+      background-color: #d7f8e3;
+      color: #124c1c;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: white;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #124c1c;
+      font-weight: 700;
+      padding: 8px 12px;
+      border: 2px solid transparent;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      border-color: #124c1c;
+      border-radius: 5px;
+    }
+    .buttons a {
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+    }
+    .signup {
+      background-color: #124c1c;
+      color: white;
+    }
+    .learnmore {
+      border: 2px solid #124c1c;
+      background: transparent;
+      color: #124c1c;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 60px 40px;
+      gap: 40px;
+    }
+    .hero-text h1 {
+      font-size: 40px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .hero-buttons a {
+      padding: 12px 24px;
+      border-radius: 10px; /* Rounded rectangle shape */
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .hero-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+      justify-items: center;
+    }
+    .hero-images img {
+      border-radius: 20px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .heartbeat {
+      grid-column: span 2;
+      width: 100px;
+      height: auto;
+      margin: 0 auto;
+    }
+    @media(max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-images {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        gap: 10px;
+      }
+    }
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .logo {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+      nav a {
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+      }
+      .buttons {
+        margin-top: 10px;
+      }
+      .hero-buttons {
+        flex-direction: column;
+      }
+    }
+    @media(max-width: 480px) {
+      .hero-text h1 {
+        font-size: 30px;
+      }
+      .hero-text p {
+        font-size: 16px;
+      }
+      .buttons a {
+        padding: 8px 16px;
+      }
+    }
+    /* Signup Form Styles */
+.signup-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup-form h2 {
+  text-align: center;
+  color: #124c1c;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.signup-form label {
+  font-weight: 700;
+  color: #124c1c;
+}
+
+.signup-form input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.signup-form input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.signup-form button {
+  padding: 12px;
+  background-color: #124c1c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+  background-color: #0c3814;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://img.icons8.com/ios-filled/50/4CAF50/hospital-room.png" alt="Cureplus Logo">
+      <h2>Cureplus</h2>
+    </div>
+    <nav>
+      <a href="#">Hospital Navigation</a>
+      <a href="#">For you</a>
+      <a href="#">Palliative care</a>
+      <a href="#">Fitness</a>
+      <a href="#" class="login">Login</a>
+    </nav>
+    <div class="buttons">
+      <a href="#" class="signup">Sign up</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Empowering your health,<br>Empowering your life</h1>
+      <p>Get 24/7 on-demand virtual care or book same/next day appointments easily with our app or website.</p>
+      <div class="hero-buttons">
+        <a href="#" class="signup">Sign up</a>
+        <a href="#" class="learnmore">Learn more</a>
+      </div>
+    </div>
+    <div class="hero-images">
+      <img src="https://img.freepik.com/free-photo/caring-nurse-supporting-elderly-patient-holding-hands_1098-19314.jpg" alt="Nurse caring for elderly">
+      <img src="https://img.freepik.com/free-photo/closeup-hands-supporting-elderly-person_53876-120320.jpg" alt="Hands care">
+    </div>
+  </section>
+
+  <!-- Hidden Signup Form Section -->
+  <section class="signup-section" id="signup-section" style="display: none;">
+    <form action="https://formspree.io/f/xzzrznkg" method="POST" class="signup-form" id="signup-form">
+      <h2>Create an Account</h2>
+      
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="message" placeholder="Enter your password" required>
+  
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+  <script>
+    // Select all signup and login buttons
+    const signupButtons = document.querySelectorAll('.signup');
+    const loginButtons = document.querySelectorAll('.login');
+    const signupSection = document.getElementById('signup-section');
+    const signupForm = document.getElementById('signup-form');
+  
+    // When clicking any Sign Up button, show the signup form
+    signupButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        signupSection.style.display = 'block';
+      });
+    });
+  
+    // When clicking any Login button, show the signup form
+    loginButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        signupSection.style.display = 'block';
+      });
+    });
+  
+    // When submitting the form, hide the nav buttons
+    signupForm.addEventListener('submit', function() {
+      const navButtons = document.getElementById('nav-buttons');
+      navButtons.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
